@@ -51,3 +51,31 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+.profile-picture img {
+    margin-left: 20px; /* Shift image to the right */
+    /* Other styles remain unchanged */
+}
+
+.navbar .nav-link i {
+    font-size: 1.25em; /* Increase icon size */
+}
+
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.navbar.dark-mode, footer.dark-mode {
+    background-color: #333333;
+}
+
+.dark-mode .navbar .nav-link, .dark-mode footer {
+    color: #ffffff;
+}
+
+.dark-mode .navbar .nav-link:hover {
+    color: #bbbbbb;
+}
