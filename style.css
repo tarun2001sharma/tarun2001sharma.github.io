@@ -3,12 +3,36 @@ body {
     padding-top: 56px; /* Adjust based on the height of your navbar */
 }
 
-.navbar-brand {
-    font-weight: bold;
+.navbar .nav-link {
+    color: #555; /* Icon color */
+}
+
+.navbar .nav-link:hover {
+    color: #333; /* Icon hover color */
+}
+
+#about .lead {
+    font-size: 1.25rem; /* Adjust the size of your intro text */
 }
 
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+/* Additional media query for responsive adjustments */
+@media (max-width: 768px) {
+    .navbar .nav-link {
+        margin: 0 10px;
+    }
+
+    #about {
+        text-align: center;
+    }
+
+    #about .col-md-7, #about .col-md-5 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
