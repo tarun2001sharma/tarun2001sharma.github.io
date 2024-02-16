@@ -1,35 +1,66 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+}
+
+.container {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding-top: 20px;
-    min-height: 70px;
-    border-bottom: #0779e4 3px solid;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
+nav .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
 }
 
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: #fff;
+nav .nav-links a {
     text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-section {
-    padding: 20px;
+nav .nav-links a:hover {
+    color: #0779e4;
+}
+
+main {
+    padding-top: 70px; /* Adjusted to the height of the header */
+    flex-grow: 1;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+#about .profile-picture {
+    /* Add styles for the profile picture here */
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about .about-content {
+    max-width: 600px;
 }
 
 footer {
@@ -37,7 +68,9 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
+
+/* Responsive adjustments can be added as needed */
