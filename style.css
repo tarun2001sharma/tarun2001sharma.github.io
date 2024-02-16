@@ -11,6 +11,21 @@ body {
     color: #333; /* Icon hover color */
 }
 
+.profile-picture img {
+    width: 150px; /* Adjust this value to set the default width */
+    height: 150px; /* Adjust this value to set the default height */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+/* Larger devices */
+@media (min-width: 768px) {
+    .profile-picture img {
+        width: 200px; /* Adjust this value for larger screens */
+        height: 200px; /* Adjust this value for larger screens */
+    }
+}
+
 #about .lead {
     font-size: 1.25rem; /* Adjust the size of your intro text */
 }
