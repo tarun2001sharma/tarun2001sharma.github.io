@@ -54,7 +54,7 @@ footer {
 
 
 .profile-picture img {
-    margin-left: 20px; /* Shift image to the right */
+    margin-left: 50px; /* Shift image to the right */
 }
 
 .navbar .nav-link i {
@@ -70,8 +70,8 @@ body {
 }
 
 .profile-picture img {
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
     margin-left: 10px; /* Adjusted for slight right shift */
