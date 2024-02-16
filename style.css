@@ -12,8 +12,8 @@ body {
 }
 
 .profile-picture img {
-    width: 150px; /* Adjust this value to set the default width */
-    height: 150px; /* Adjust this value to set the default height */
+    width: 350px; /* Adjust this value to set the default width */
+    height: 350px; /* Adjust this value to set the default height */
     border-radius: 50%; /* Makes the image round */
     object-fit: cover; /* Ensures the image covers the area without stretching */
 }
@@ -53,7 +53,7 @@ footer {
 }
 
 .profile-picture img {
-    margin-left: 20px; /* Shift image to the right */
+    margin-left: 60px; /* Shift image to the right */
     /* Other styles remain unchanged */
 }
 
