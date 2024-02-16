@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarun Sharma</title>
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Updated Bootstrap CSS to version 5.3 for dark mode compatibility -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- Your Custom Styles -->
@@ -70,12 +70,17 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- Dark Mode Toggle Script -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script>
+    // JavaScript to toggle dark mode
     const toggleButton = document.getElementById('darkModeToggle');
     toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        // Swap icon or add animations as needed
+        const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+        if(currentTheme === 'dark') {
+            document.documentElement.removeAttribute('data-bs-theme');
+        } else {
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+        }
     });
 </script>
 
