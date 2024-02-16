@@ -61,25 +61,54 @@ footer {
     font-size: 1.5em; /* Increase icon size */
 }
 
-/* Dark mode styles */
-:root[data-bs-theme='dark'] {
-    --bs-body-bg: #212529;
-    --bs-body-color: #f8f9fa;
-    --bs-footer-bg: #343a40;
-    --bs-footer-color: #f8f9fa;
+body {
+    padding-top: 56px;
 }
 
+.navbar .nav-link i {
+    font-size: 1.5em; /* Increase the size of icons */
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px; /* Adjusted for slight right shift */
+}
+
+@media (min-width: 768px) {
+    .profile-picture img {
+        width: 250px; /* Increased size for larger devices */
+        height        250px; /* Increase for a more prominent presence */
+        margin-left: 20px; /* Shift to the right for alignment */
+    }
+}
+
+/* Dark Mode Specific Styles */
 body[data-bs-theme='dark'] {
-    background-color: var(--bs-body-bg);
-    color: var(--bs-body-color);
+    background-color: #343a40;
+    color: #ffffff;
 }
 
-footer[data-bs-theme='dark'] {
-    background-color: var(--bs-footer-bg);
-    color: var(--bs-footer-color);
+.navbar[data-bs-theme='dark'], footer[data-bs-theme='dark'] {
+    background-color: #212529;
+    color: #ffffff;
 }
 
-/* Smooth transition for theme change */
-body, footer {
-    transition: background-color 0.5s ease, color 0.5s ease;
+[data-bs-theme='dark'] .navbar .nav-link {
+    color: #ffffff;
+}
+
+[data-bs-theme='dark'] .navbar .nav-link:hover {
+    color: #cccccc;
+}
+
+/* Ensure smooth transition between themes */
+:root {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+[data-bs-theme='dark'] *, [data-bs-theme='dark'] *:before, [data-bs-theme='dark'] *:after {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
