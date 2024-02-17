@@ -35,7 +35,7 @@ body {
     height: 100%;
     background: rgba(255, 255, 255, 0.2); /* Light fade effect, adjust color/opacity as needed */
     opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease; /* Smooth transition */
+    transition: opacity 0.5s ease; /* Smooth transition */
   }
   
   .profile-picture:hover::before {
@@ -45,7 +45,7 @@ body {
   /* Optional: Scale image slightly on hover for interactive effect */
   .profile-picture:hover img {
     transform: scale(1.05);
-    opacity: 0.9; /* Make the image a little faded on hover */
+    opacity: 0.1; /* Make the image a little faded on hover */
   }
   
 
@@ -70,8 +70,8 @@ body {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #008CBA; /* Overlay background color */
-    color: white; /* Text color */
+    background-color: #abb0b2; /* Overlay background color */
+    color: rgb(0, 0, 0); /* Text color */
     display: flex;
     justify-content: center;
     align-items: center;
