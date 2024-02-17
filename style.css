@@ -202,6 +202,9 @@ body.dark {
     cursor: pointer;
     transition: var(--transition);
     background: var(--switch-bg);
+    transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5)
 }
 
 .switch::before {
