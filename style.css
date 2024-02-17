@@ -31,11 +31,11 @@ body {
 
 /* This will make the image scale up a bit on hover */
 .profile-picture:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 /* Larger devices */
-@media (min-width: 1468px) {
+@media (min-width: 768px) {
     .profile-picture img {
         width: 400px; /* Adjust this value for larger screens */
         height: 400px; /* Adjust this value for larger screens */
