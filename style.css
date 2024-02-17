@@ -12,11 +12,45 @@ body {
 }
 
 .profile-picture img {
-    width: 100%; /* Adjust this to control the size of the photo */
+    width: 100%; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image covers the div */
-    border-radius: 0; /* Make it rectangular */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 6px 20px rgba(0,0,0,0.19); /* Shadow effect */
+    object-fit: cover; /* Cover the container without stretching */
+    border-radius: 5px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.profile-picture:hover img {
+    opacity: 0.7; /* Fade effect on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Overlay styles (if you want to add text or icons on hover) */
+.profile-picture {
+    position: relative;
+    display: inline-block; /* Adjust as needed */
+}
+
+.profile-picture .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA; /* Overlay background color */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px; /* Adjust text size as needed */
+}
+
+.profile-picture:hover .overlay {
+    opacity: 1;
 }
 /* Larger devices */
 @media (min-width: 768px) {
