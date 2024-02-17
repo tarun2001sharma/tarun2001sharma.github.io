@@ -12,7 +12,7 @@ body {
 }
 
 .profile-picture img {
-    width: 100%; /* adjust as necessary */
+    width: 200%; /* adjust as necessary */
     height: auto; /* this will maintain the aspect ratio */
     object-fit: cover; /* this could be 'contain' if you want to see the whole image */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 6px 20px rgba(0,0,0,0.19); /* Shadow effect */
@@ -63,7 +63,7 @@ footer {
     }
 
     #about .col-md-7, #about .col-md-5 {
-        text-align: center;
+        text-align: right;
         margin-bottom: 20px;
     }
 }
