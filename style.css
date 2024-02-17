@@ -12,12 +12,12 @@ body {
 }
 
 .profile-picture img {
-    width: 100%; /* Adjust this to control the size of the photo */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image covers the div */
-    border-radius: 0; /* Make it rectangular */
+    width: 100%; /* adjust as necessary */
+    height: auto; /* this will maintain the aspect ratio */
+    object-fit: cover; /* this could be 'contain' if you want to see the whole image */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 6px 20px rgba(0,0,0,0.19); /* Shadow effect */
 }
+
 /* Larger devices */
 @media (min-width: 768px) {
     .profile-picture img {
