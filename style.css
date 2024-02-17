@@ -31,14 +31,14 @@ body {
 
 /* This will make the image scale up a bit on hover */
 .profile-picture:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
 /* Larger devices */
-@media (min-width: 768px) {
+@media (min-width: 1468px) {
     .profile-picture img {
-        width: 200px; /* Adjust this value for larger screens */
-        height: 200px; /* Adjust this value for larger screens */
+        width: 400px; /* Adjust this value for larger screens */
+        height: 400px; /* Adjust this value for larger screens */
     }
 }
 
@@ -53,17 +53,17 @@ footer {
 }
 
 /* Additional media query for responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     .navbar .nav-link {
-        margin: 0 5px;
+        margin: 0 10px;
     }
 
     #about {
-        text-align: center;
+        text-align: right;
     }
 
     #about .col-md-7, #about .col-md-5 {
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 }
