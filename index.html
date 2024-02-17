@@ -11,7 +11,7 @@
     <!-- Your Custom Styles -->
     <link rel="stylesheet" href="style.css">
     <!-- Include jQuery for the dark mode toggle script -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -38,9 +38,12 @@
             <!-- Existing navbar content -->
         
             <!-- Dark Mode Toggle Button -->
-        <button class="navbar-toggler" type="button" id="darkModeToggle">
+        <!-- Dark Mode Toggle Button -->
+        <button class="btn btn-sm btn-dark ml-auto" id="darkModeToggle">Dark Mode</button>
+
+        <!-- <button class="navbar-toggler" type="button" id="darkModeToggle">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
     </div>
 </nav>
 
@@ -118,7 +121,7 @@
         $('#darkModeToggle').click(function () {
             $('body').toggleClass('dark-mode');
             $('.navbar').toggleClass('navbar-dark bg-dark navbar-light bg-light');
-            // Add more elements to toggle here if needed
+            $(this).toggleClass('btn-light btn-dark');
         });
     });
 </script>
