@@ -12,9 +12,14 @@ body {
 }
 
 .navbar .switch {
-    margin-top: 8px; /* Adjust the top margin for alignment */
+    margin-top: 28px; /* Adjust the top margin for alignment */
   }
-
+  
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* This helps to maintain the aspect ratio */
+}
 .profile-picture img {
     width: 200%; /* adjust as necessary */
     height: auto; /* this will maintain the aspect ratio */
@@ -75,7 +80,7 @@ footer {
 /* Styles for dark mode */
 /* Dark Mode Styles */
 .dark-mode {
-    background-color: #343a40;
+    background-color: #292a2c;
     color: #ffffff;
 }
 
