@@ -68,7 +68,21 @@ footer {
     }
 }
 
+/* Styles for dark mode */
 .dark-mode {
-    background-color: #121212;
-    color: white;
+    background-color: #121212; /* Dark background for the body */
+    color: #ffffff; /* Light text for better readability on dark background */
+}
+
+.dark-mode .navbar {
+    background-color: #343a40 !important; /* Dark navbar */
+}
+
+.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #ffffff; /* Light text for nav links */
+}
+
+.dark-mode .navbar-light .navbar-nav .nav-link:hover,
+.dark-mode .navbar-light .navbar-nav .nav-link:focus {
+    color: #f8f9fa; /* Lighter text for nav links on hover/focus */
 }
