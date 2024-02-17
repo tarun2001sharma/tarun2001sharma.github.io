@@ -11,14 +11,43 @@ body {
     color: #333; /* Icon hover color */
 }
 
+/* Rectangular Profile Picture with Shadow */
 .profile-picture img {
-    width: 100%; /* Adjust the width as needed */
+    width: 100%; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the container without stretching */
-    border-radius: 5px; /* Optional: for rounded corners */
+    object-fit: cover; /* Cover the container, you can adjust this as per your preference */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effect */
-}
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Image Overlay Fade on Hover */
+  .profile-picture {
+    position: relative; /* Required for pseudo-element positioning */
+    overflow: hidden; /* Ensures pseudo-element does not extend outside */
+  }
+  
+  .profile-picture::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light fade effect, adjust color/opacity as needed */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth transition */
+  }
+  
+  .profile-picture:hover::before {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  /* Optional: Scale image slightly on hover for interactive effect */
+  .profile-picture:hover img {
+    transform: scale(1.05);
+    opacity: 0.9; /* Make the image a little faded on hover */
+  }
+  
 
 .profile-picture:hover img {
     opacity: 0.7; /* Fade effect on hover */
@@ -86,60 +115,3 @@ footer {
     }
 }
 
-body{
-    background-color:#eee;
-}
-
-.container {
-    margin-top: 100px;
-}
-
-.imageselect .imagebox {
-    position: relative;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-}
-
-.imageselect .imagebox figure {
-    position: relative;
-    overflow: hidden;
-}
-
-.imageselect .imagebox img {
-    width: 100%;
-    transition: opacity 0.5s ease;
-}
-
-.imageselect .imagebox:hover img {
-    opacity: 0.7;
-}
-
-.imageselect .imagebox figcaption {
-    background: rgba(45, 62, 82, 0.9);
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    padding: 20px;
-    transform: translateY(140%);
-    transition: transform 0.5s ease;
-}
-
-.imageselect .imagebox:hover figcaption {
-    transform: translateY(0);
-}
-
-.imageselect .imagebox .caption-title {
-    margin-bottom: 0;
-    color: #fff;
-}
-
-.imageselect .imagebox .price {
-    color: #f0715f;
-    font-size: 1.6667em;
-    text-transform: uppercase;
-    float: right;
-    text-align: right;
-    line-height: 1;
-    display: block;
-}
