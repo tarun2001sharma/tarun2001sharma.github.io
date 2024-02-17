@@ -11,6 +11,10 @@ body {
     color: #333; /* Icon hover color */
 }
 
+.navbar .switch {
+    margin-top: 8px; /* Adjust the top margin for alignment */
+  }
+
 .profile-picture img {
     width: 200%; /* adjust as necessary */
     height: auto; /* this will maintain the aspect ratio */
