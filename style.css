@@ -93,6 +93,15 @@ footer {
     color: #ffffff;
 }
 
+/* Specific elements adjustment if needed */
+.dark a, .dark p, .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #E2E2E2; /* Ensures links and headings also change color */
+}
+
+.dark .navbar-light .navbar-nav .nav-link {
+    color: #E2E2E2; /* Change navbar link colors in dark mode */
+}
+
 /* This will style the button to toggle between dark and light mode icons */
 #darkModeToggle.btn-dark {
     color: #ffffff;
