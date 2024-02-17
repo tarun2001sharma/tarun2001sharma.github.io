@@ -101,3 +101,58 @@ footer {
     background-color: #ffffff;
     border-color: #ffffff;
 }
+
+/* The switch - the box around the slider */
+.custom-control-label::before {
+    background-color: #fff;
+  }
+  
+  /* Hide default HTML checkbox */
+  .custom-control-input {
+    display: none;
+  }
+  
+  /* The slider */
+  .custom-control-label::after {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 14px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 34px;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .custom-control-input:checked + .custom-control-label::after {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .custom-control-input:checked + .custom-control-label::before {
+    background-color: #2196F3;
+    opacity: 1;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .custom-control-label::before {
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #2020203d;
+  }
+  
+  /* When the checkbox is checked, move the indicator to the right */
+  .custom-control-input:checked + .custom-control-label::before {
+    transform: translateX(16px);
+  }
+  

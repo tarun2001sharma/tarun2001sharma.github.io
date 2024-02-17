@@ -35,15 +35,15 @@
                 <a class="nav-link" href="#contact">Contact</a>
             </div>
         </div>
-            <!-- Existing navbar content -->
-        
-            <!-- Dark Mode Toggle Button -->
-        <!-- Dark Mode Toggle Button -->
-        <button class="btn btn-sm btn-dark ml-auto" id="darkModeToggle">Dark Mode</button>
 
-        <!-- <button class="navbar-toggler" type="button" id="darkModeToggle">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
+        <!-- Dark Mode Toggle Button -->
+        <!-- <button class="btn btn-sm btn-dark ml-auto" id="darkModeToggle">Dark Mode</button> -->
+        <!-- Dark Mode Switch -->
+        <div class="custom-control custom-switch ml-auto">
+            <input type="checkbox" class="custom-control-input" id="darkModeSwitch">
+            <label class="custom-control-label" for="darkModeSwitch"></label>
+        </div>
+
     </div>
 </nav>
 
@@ -118,10 +118,10 @@
 <!-- Dark Mode Toggle Script -->
 <script>
     $(document).ready(function(){
-        $('#darkModeToggle').click(function () {
+        $('#darkModeSwitch').change(function () {
             $('body').toggleClass('dark-mode');
             $('.navbar').toggleClass('navbar-dark bg-dark navbar-light bg-light');
-            $(this).toggleClass('btn-light btn-dark');
+            $('#darkModeSwitch').toggleClass('checked');
         });
     });
 </script>
