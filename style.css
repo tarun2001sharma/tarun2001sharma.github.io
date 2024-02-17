@@ -1,4 +1,162 @@
-:root {
+/* style.css */
+body {
+    padding-top: 56px; /* Adjust based on the height of your navbar */
+}
+
+.navbar .nav-link {
+    color: #555; /* Icon color */
+}
+
+.navbar .nav-link:hover {
+    color: #333; /* Icon hover color */
+}
+
+.profile-picture img {
+    width: 200%; /* adjust as necessary */
+    height: auto; /* this will maintain the aspect ratio */
+    object-fit: cover; /* this could be 'contain' if you want to see the whole image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 6px 20px rgba(0,0,0,0.19); /* Shadow effect */
+}
+
+.profile-picture {
+    /* Trigger the hover effect */
+    transition: opacity 0.5s ease;
+    cursor: pointer; /* Change cursor on hover to indicate it can be clicked */
+}
+
+.profile-picture:hover .profile-img {
+    /* Apply the fading effect */
+    opacity: 0.7;
+}
+
+/* This will make the image scale up a bit on hover */
+.profile-picture:hover {
+    transform: scale(1.01);
+}
+
+/* Larger devices */
+@media (min-width: 768px) {
+    .profile-picture img {
+        width: 400px; /* Adjust this value for larger screens */
+        height: 400px; /* Adjust this value for larger screens */
+    }
+}
+
+#about .lead {
+    font-size: 1.25rem; /* Adjust the size of your intro text */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Additional media query for responsive adjustments */
+@media (max-width: 400px) {
+    .navbar .nav-link {
+        margin: 0 10px;
+    }
+
+    #about {
+        text-align: right;
+    }
+
+    #about .col-md-7, #about .col-md-5 {
+        text-align: right;
+        margin-bottom: 20px;
+    }
+}
+
+/* Styles for dark mode */
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.dark-mode .navbar {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.dark-mode .nav-link {
+    color: #ffffff;
+}
+
+.dark-mode .footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+/* This will style the button to toggle between dark and light mode icons */
+#darkModeToggle.btn-dark {
+    color: #ffffff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+#darkModeToggle.btn-light {
+    color: #343a40;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* The switch - the box around the slider */
+.custom-control-label::before {
+    background-color: #fff;
+  }
+  
+  /* Hide default HTML checkbox */
+  .custom-control-input {
+    display: none;
+  }
+  
+  /* The slider */
+  .custom-control-label::after {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 14px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 34px;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .custom-control-input:checked + .custom-control-label::after {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .custom-control-input:checked + .custom-control-label::before {
+    background-color: #2196F3;
+    opacity: 1;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .custom-control-label::before {
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #2020203d;
+  }
+  
+  /* When the checkbox is checked, move the indicator to the right */
+  .custom-control-input:checked + .custom-control-label::before {
+    transform: translateX(16px);
+  }
+  
+  :root {
     --bg-color: #cde7ff;
     --switch-width: 150px;
     --switch-height: 65px;
