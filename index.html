@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarun Sharma</title>
-    <!-- Bootstrap CSS CDN (Ensure you are using Bootstrap 5 for dark mode support) -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- Your Custom Styles -->
@@ -21,8 +21,6 @@
             <a class="nav-link" href="https://www.linkedin.com/in/yourprofile"><i class="fab fa-linkedin-in"></i></a>
             <a class="nav-link" href="https://github.com/yourprofile"><i class="fab fa-github"></i></a>
         </div>
-        <!-- Dark Mode Toggle Button -->
-       
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,10 +32,6 @@
                 <a class="nav-link" href="#contact">Contact</a>
             </div>
         </div>
-
-        <button id="darkModeToggle" class="btn btn-sm">
-            <i class="fas fa-moon"></i>
-        </button>
     </div>
 </nav>
 
@@ -51,34 +45,42 @@
         </div>
         <div class="col-md-5">
             <div class="profile-picture">
-                <img src="https://github.com/tarun2001sharma/Tarun-Sharma/blob/master/MEatGraduation.jpg?raw=true"  alt="Profile Picture">
-            </div>
+                <a href="#" data-toggle="modal" data-target="#profilePictureModal">
+                    <img src="https://github.com/tarun2001sharma/Tarun-Sharma/blob/master/MEatGraduation.jpg?raw=true"  alt="Profile Picture">
+                </a>
             <!-- <img src=alt="Profile Picture"> -->
         </div>
     </section>
     <!-- Other Sections... -->
 </div>
 
+<!-- Footer -->
 <footer class="bg-dark text-light text-center py-3">
     <div class="container">
         <p>&copy; 2024 Tarun Sharma</p>
     </div>
 </footer>
 
+<!-- Profile Picture Modal -->
+<div class="modal fade" id="profilePictureModal" tabindex="-1" role="dialog" aria-labelledby="profilePictureModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="profilePictureModalLabel">Profile Picture</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="https://github.com/tarun2001sharma/Tarun-Sharma/blob/master/MEatGraduation.jpg?raw=true" class="img-fluid" alt="Profile Picture">
+        </div>
+      </div>
+    </div>
+  </div>
+
 <!-- Bootstrap JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
-<script>
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    darkModeToggle.addEventListener('click', function() {
-        const currentTheme = document.documentElement.getAttribute('data-bs-theme');
-        if (currentTheme === 'dark') {
-            document.documentElement.removeAttribute('data-bs-theme');
-        } else {
-            document.documentElement.setAttribute('data-bs-theme', 'dark');
-        }
-    });
-</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
