@@ -85,7 +85,7 @@ footer {
 }
 
 .dark-mode .footer {
-    background-color: #343a40;
+    background-color: #121416;
     color: #ffffff;
 }
 
@@ -157,7 +157,7 @@ footer {
   }
   
   :root {
-    --bg-color: #cde7ff;
+    --bg-color: #ced2d8;
     --switch-width: 150px;
     --switch-height: 65px;
     --switch-round: 50px;
