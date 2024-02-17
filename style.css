@@ -18,15 +18,20 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 6px 20px rgba(0,0,0,0.19); /* Shadow effect */
 }
 
-.profile-picture .profile-img {
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    margin-left: auto; /* This will shift the image to the right side */
-    display: block;
+.profile-picture {
+    /* Trigger the hover effect */
+    transition: opacity 0.5s ease;
+    cursor: pointer; /* Change cursor on hover to indicate it can be clicked */
 }
 
-.profile-picture .profile-img:hover {
-    transform: scale(1.1); /* This will make the image larger */
-    opacity: 0.7; /* This will create the fading effect */
+.profile-picture:hover .profile-img {
+    /* Apply the fading effect */
+    opacity: 0.7;
+}
+
+/* This will make the image scale up a bit on hover */
+.profile-picture:hover {
+    transform: scale(1.1);
 }
 
 /* Larger devices */
@@ -50,7 +55,7 @@ footer {
 /* Additional media query for responsive adjustments */
 @media (max-width: 768px) {
     .navbar .nav-link {
-        margin: 0 10px;
+        margin: 0 5px;
     }
 
     #about {
@@ -59,6 +64,6 @@ footer {
 
     #about .col-md-7, #about .col-md-5 {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 }
