@@ -18,6 +18,17 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 6px 20px rgba(0,0,0,0.19); /* Shadow effect */
 }
 
+.profile-picture .profile-img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    margin-left: auto; /* This will shift the image to the right side */
+    display: block;
+}
+
+.profile-picture .profile-img:hover {
+    transform: scale(1.1); /* This will make the image larger */
+    opacity: 0.7; /* This will create the fading effect */
+}
+
 /* Larger devices */
 @media (min-width: 768px) {
     .profile-picture img {
